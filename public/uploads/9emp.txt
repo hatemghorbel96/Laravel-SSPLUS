@@ -1,0 +1,24 @@
+       <select id="select_u_fk_fonction_id" class="form-control  input-sm  input-sm" name="u_fk_fonction_id">
+            <option value="0">Indéfini</option><option value="23790">Chef d'équipe</option>
+<option value="23789">Stagiaire</option>
+</select> 
+
+
+
+
+     public function up()
+    {
+        Schema::create('employers', function (Blueprint $table) {
+            $table->bigIncrements('id_emp');
+            $table->String('Login');
+            $table->String('Pass');
+            $table->String('Prenom');
+            $table->String('Nom');
+            $table->String('Email');
+            $table->String('Telephone');
+            $table->String('dateNais');
+            $table->String('Fonction');
+            $table->String('Commentaire');
+            $table->timestamps();
+        });
+    }
